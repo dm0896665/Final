@@ -1,0 +1,193 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+div.card-header {
+ font-size: large;
+ text-align: center;
+}
+
+div.card {
+  margin-top: 10px
+}
+
+.table {
+  margin-top: 10px
+}
+body{
+  background-color: #909090;
+}
+
+.card-body
+{
+  background-color: #F0F0F0;
+}
+
+a
+{
+  padding-bottom: 30px;
+  color: lightgray;
+  border-bottom: 3px solid transparent;
+}
+a:hover
+{
+  border-bottom: 3px solid black;
+  color: black;
+}
+
+/*text over pic stuff*/
+.img_wrap {
+  position: relative;
+  width: 20vw;
+  height: 30vw;
+  margin-right: 1vw;
+  margin-bottom: 20px;
+}
+.img_img
+{
+  width: 20vw;
+  height: 30vw;
+  box-shadow: 5px 10px 8px black;
+}
+.img_description_layer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  visibility: hidden;
+  background:rgba(0,0,0,0.65);
+  display: flex;
+  justify-content: center;
+  transition: opacity .2s, visibility .2s;
+}
+.img_wrap:hover .img_description_layer {
+  visibility: visible;
+  opacity: 1;
+}
+.img_wrap:hover .img_name
+{
+  visibility: hidden;
+}
+.img_description {
+
+  transition: .2s;
+  transform: translateY(30vw);
+  color: #fff;
+  font-size: 1vw;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.img_wrap:hover .img_description {
+  transform: translateY(0);
+}
+.contain{
+  width: 90%;
+  margin: auto;
+  padding-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background-color: #F0F0F0;
+}
+.img_name
+{
+  visibility: visible;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5vw;
+  color: #fff;
+}
+
+/*responsiveness*/
+@media screen and (max-width: 992px)
+{
+  .img_wrap {
+    width: 30vw;
+    height: 45vw;
+    margin-right: 1.5vw;
+  }
+  .img_img
+  {
+    width: 30vw;
+    height: 45vw;
+  }
+  .img_description {
+    font-size: 2.25vw;
+  }
+  .img_name
+  {
+    font-size: 2.25vw;
+  }
+  .container
+  {
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+  }
+  .row
+  {
+    align-content: center;
+    align-items: center;
+  }
+  .col-sm-4 {
+    margin: 0px;
+    margin-right: 20px;
+    padding-right: 375px;
+  }
+  .map {
+    width: 63.5vw;
+  }
+  #callUs
+  {
+    top: 50px;
+  }
+}
+@media screen and (max-width: 768px)
+{
+  .faq_question {
+      font-size: 5vw;
+  }
+  .faq_answer_container {
+      font-size: 2.8vw;
+  }
+  #callUs
+  {
+    top: 50px;
+    font-size:3vw;
+  }
+  #stillCon
+  {
+    font-size:6vw;
+  }
+}
+@media screen and (max-width:576px)
+{
+  .img_wrap {
+    width: 60vw;
+    height: 90vw;
+    margin-right: 3vw;
+  }
+  .img_img
+  {
+    width: 60vw;
+    height: 90vw;
+  }
+  .img_description {
+    font-size: 4.5vw;
+  }
+  .img_name
+  {
+    font-size: 4.5vw;
+  }
+  .row{
+    width:100%;
+  }
+  .col-sm-4 {
+    margin: 0px;
+    margin-right: 0px;
+    padding-right: 0px;
+  }
+}

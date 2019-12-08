@@ -1,0 +1,9 @@
+<hr>
+<div class="contain">
+    <div class="img_wrap" *ngFor='let show of shows.results'>
+        <img class="img_img" [src] = "'http://image.tmdb.org/t/p/w500/'+show.poster_path" [title] = "show.name" />
+        <div class="img_description_layer">
+        <h1 class="img_description"><br />{{ show.name}}<br /><br />{{ show.first_air_date}}<br /><br /> {{ show.overview}}</h1>
+        </div>
+    </div>
+</div>

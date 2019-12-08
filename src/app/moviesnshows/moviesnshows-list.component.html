@@ -1,0 +1,14 @@
+<div class="contain">
+    <div class="img_wrap" id = "theMovie">
+        <img class="img_img" img [src] = "'http://image.tmdb.org/t/p/w400/'+movies.results[0].poster_path" [title] = "movies.results[0].title" [routerLink]="['/movies']" id = "sPic"/>
+        <div class="img_description_layer" [routerLink]="['/movies']">
+            <h1 class="img_description" style="font-size: 3vw;"><br /><br /><br />Movies</h1>
+        </div>
+    </div>
+    <div class="img_wrap">
+        <img class="img_img" img [src] = "'http://image.tmdb.org/t/p/w400/'+shows.results[0].poster_path" [title] = "shows.results[0].name" [routerLink]="['/shows']" id = "sPic" />
+        <div class="img_description_layer" [routerLink]="['/shows']">
+            <h1 class="img_description" style="font-size: 3vw;"><br /><br /><br />Shows</h1>
+        </div>
+    </div>
+</div>
